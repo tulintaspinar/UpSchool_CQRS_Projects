@@ -1,0 +1,40 @@
+﻿@model List<GetProductAccounterQeuryResult>
+@{
+    Layout = null;
+    int count = 0;
+}
+<a href="~/lib/bootstrap/dist/css/bootstrap.css.map"></a>
+<a href="~/lib/bootstrap/dist/css/bootstrap.min.css.map"></a>
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+<link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+<div class="container">
+    <h2>MUHASEBECİ PANELİ</h2>
+    <br />
+    <table class="table table-bordered">
+        <tr>
+            <th>#</th>
+            <th>Ürün Adı</th>
+            <th>Marka</th>
+            <th>Stok Sayısı</th>
+            <th>Detaylar İK</th>
+            <th>Detaylar Muhasebe</th>
+            <th>Sil</th>
+            <th>Güncelle</th>
+        </tr>
+       @foreach (var item in Model)
+        {
+            count++;
+            <tr>
+                 <td>@count</td>
+                 <td>@item.Name</td>
+                 <td>@item.Brand</td>
+                 <td>@item.Stock</td>
+                <td><a href="/Product/GetHumanResourceIndex/@item.ProductID" class="btn btn-dark">Detaylar</a></td>
+                <td><a href="/Product/AccounterIndexById/@item.ProductID" class="btn btn-dark">Detaylar</a></td>
+                 <td><a href="#" class="btn btn-danger">Sil</a></td>
+                 <td><a href="#" class="btn btn-success">Güncelle</a></td>
+            </tr>
+        }
+    </table>
+    <a href="#" class="btn btn-primary">EKLE</a>
+</div>
