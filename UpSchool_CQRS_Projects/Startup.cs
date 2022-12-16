@@ -1,3 +1,4 @@
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -26,6 +27,8 @@ namespace UpSchool_CQRS_Projects
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddMediatR(typeof(Startup));
+
             services.AddDbContext<ProductContext>();
             services.AddScoped<GetProductAccounterQeuryHandler>();
             services.AddScoped<GetProductStoragerQueryHandler>();
@@ -39,6 +42,8 @@ namespace UpSchool_CQRS_Projects
             services.AddScoped<RemoveStudentCommandHandler>();
             services.AddScoped<GetStudentByIdQueryHandler>();
             services.AddScoped<UpdateStudentCommandHandler>();
+
+            
 
 
             services.AddControllersWithViews();

@@ -1,0 +1,30 @@
+﻿@model List<GetAllUniversityQueryResult>
+@{
+    Layout = null;
+}
+
+<div class="container">
+    <br />
+    <table class="table table-bordered">
+        <tr>
+            <th>#</th>
+            <th>Üniversite</th>
+            <th>Şehir</th>
+            <th>Sil</th>
+            <th>Güncelle</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.UniversityID</td>
+                <td>@item.Name</td>
+                <td>@item.Town</td>
+                <td><a href="/University/Delete/@item.UniversityID" class="btn btn-danger">SİL</a></td>
+                <td><a href="/University/Update/@item.UniversityID" class="btn btn-success">GÜNCELLE</a></td>
+            </tr>
+        }
+    </table>
+    <a href="/University/Add" class="btn btn-info">EKLE</a>
+</div>
+<script src="~/lib/bootstrap/dist/css/bootstrap.css"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
