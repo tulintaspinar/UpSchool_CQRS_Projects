@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33122.133
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UpSchool_CQRS_Projects", "UpSchool_CQRS_Projects\UpSchool_CQRS_Projects.csproj", "{2C94B8AC-DD4A-4021-A81D-B587C52163A3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UpSchool_CQRS_Projects", "UpSchool_CQRS_Projects\UpSchool_CQRS_Projects.csproj", "{2C94B8AC-DD4A-4021-A81D-B587C52163A3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UpSchoolCQRS", "UpSchoolCQRS", "{79153BAF-0648-41FC-A79B-A68DB09505CA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,6 +20,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2C94B8AC-DD4A-4021-A81D-B587C52163A3} = {79153BAF-0648-41FC-A79B-A68DB09505CA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A5EBA548-19CA-4632-BDCF-33F5A8BC1B8C}
